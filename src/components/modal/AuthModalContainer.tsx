@@ -103,7 +103,7 @@ export function AuthModalContainer() {
                 Don’t have an account?{" "}
                 <button
                   type="button"
-                  className="text-blue-600 hover:underline font-semibold"
+                  className="text-blue-600 hover:underline cursor-pointer font-semibold"
                   onClick={() => setType("register")}
                 >
                   Sign up

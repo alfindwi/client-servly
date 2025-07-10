@@ -6,7 +6,7 @@ import { IoMail } from "react-icons/io5";
 
 export function Footer() {
   return (
-    <footer className="w-full px-10 bg-[#f6f1ea] text-gray-600 font-sans">
+    <footer className="w-full px-10 text-gray-600 font-sans">
       <div className="max-w-full mx-auto py-6">
         <hr className="border-gray-200 my-6" />
 
