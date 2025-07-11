@@ -8,8 +8,6 @@ export function Footer() {
   return (
     <footer className="w-full px-10 text-gray-600 font-sans">
       <div className="max-w-full mx-auto py-6">
-        <hr className="border-gray-200 my-6" />
-
         <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-6">
           <div className="flex flex-col justify-center py-6">
             <a href="#" className="flex items-center mb-4">
@@ -21,23 +19,32 @@ export function Footer() {
             </a>
 
             <div className="flex text-2xl text-black  gap-3 mt-4">
-              <a
-                href="https://www.linkedin.com/in/alfin-dwi-wadani/"
-                target="_blank"
-              >
-                <FaLinkedin className="hover:text-[#0e76bc] cursor-pointer" />
-              </a>
-              <a href="https://www.instagram.com/alvindvvi" target="_blank">
-                <AiFillInstagram className="hover:text-[#0e76bc] cursor-pointer" />
-              </a>
-              <a href="https://open.spotify.com/user/alvindvvi" target="_blank">
-                <FaDiscord className="hover:text-[#0e76bc] cursor-pointer" />
-              </a>
+              <div className="flex gap-3 border p-2 rounded-md border-[#0170b9]">
+                <a
+                  href="https://www.linkedin.com/in/alfin-dwi-wadani/"
+                  target="_blank"
+                >
+                  <FaLinkedin className="text-[#0e76bc] cursor-pointer" />
+                </a>
+              </div>
+              <div className="flex gap-3 border p-2 rounded-md border-[#0170b9]">
+                <a href="https://www.instagram.com/alvindvvi" target="_blank">
+                  <AiFillInstagram className="text-[#0e76bc] cursor-pointer" />
+                </a>
+              </div>
+              <div className="flex gap-3 border p-2 rounded-md border-[#0170b9]">
+                <a
+                  href="https://open.spotify.com/user/alvindvvi"
+                  target="_blank"
+                >
+                  <FaDiscord className="text-[#0e76bc] cursor-pointer" />
+                </a>
+              </div>
             </div>
           </div>
 
           <div>
-            <h3 className="text-black font-semibold text-base mt-2 mb-4">
+            <h3 className="text-[#272343] font-semibold text-base mt-2 mb-4">
               Quick Links
             </h3>
             <div className="grid grid-cols-2 gap-4">
@@ -79,7 +86,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-black font-semibold text-base mt-2 mb-4">
+            <h3 className="text-[#272343] font-semibold text-base mt-2 mb-4">
               Let's talk
             </h3>
             <ul className="space-y-2 text-sm">
@@ -95,15 +102,19 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-black font-semibold text-base mt-2 mb-4">
+            <h3 className="text-[#272343] font-semibold text-base mt-2 mb-4">
               Find Us
             </h3>
 
             <div className="flex items-start gap-3">
               <FaLocationDot className="mt-1 text-[#0e76bc]" />
 
-              <a href="https://maps.app.goo.gl/S31K5UDynniK7MFw6" target="_blank" className="hover:underline">
-                <p className="text-sm text-gray-700 leading-relaxed">
+              <a
+                href="https://maps.app.goo.gl/S31K5UDynniK7MFw6"
+                target="_blank"
+                className="hover:underline"
+              >
+                <p className="text-sm text-[#272343]/80 leading-relaxed">
                   Marchand Hype Station, <br />
                   Jl. Emerald Boulevard, Parigi, <br /> Kec. Pd. Aren, Kota
                   Tangerang Selatan,

@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { WhyChooseUs } from "./whyChoose";
 import { OurService } from "./ourService";
+import { Testimonial } from "./testimoni";
 
 export function Home() {
   
@@ -18,6 +19,7 @@ export function Home() {
       <Hero />
       <WhyChooseUs />
       <OurService />
+      <Testimonial/>
     </>
   );
 }
