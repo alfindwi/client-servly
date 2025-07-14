@@ -10,7 +10,7 @@ export function Home() {
   
   useEffect(() => {
     AOS.init({
-      duration: 2000,
+      duration: 800,
       once : true
     })
   }, [])

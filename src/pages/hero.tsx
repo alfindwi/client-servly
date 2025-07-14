@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { FaStar } from "react-icons/fa";
 
 export function Hero() {
@@ -9,7 +8,7 @@ export function Hero() {
         className="w-full md:w-1/2 max-w-2xl text-black"
       >
         <div className="text-7xl text-[#272343] font-bold space-y-2 pt-7 pb-4">
-          <h1 >
+          <h1>
             We are <span className="text-[#0074C1]">service</span>
           </h1>
           <p>
@@ -18,12 +17,9 @@ export function Hero() {
           <p>home.</p>
         </div>
         <p className="text-base text-[#272343]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolores
-          quos, ipsa
+          Reliable home services made simple: cleaning, repairs, and more — all
+          delivered by experienced professionals you can trust.
         </p>
-        <Button variant={"blue"} className="mt-5 px-6 py-4">
-          Book now
-        </Button>
       </div>
 
       <div className="relative flex justify-center md:justify-end w-full md:w-1/2">
@@ -41,6 +37,7 @@ export function Hero() {
           src="./src/assets/plumber.png"
           alt="Plumber"
           className="relative z-10 object-contain"
+          onContextMenu={(e) => e.preventDefault()}
         />
 
         <div

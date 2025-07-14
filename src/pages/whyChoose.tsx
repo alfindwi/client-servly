@@ -4,11 +4,13 @@ import { HeaderText } from "@/components/headerText";
 export function WhyChooseUs() {
   return (
     <div className="bg-[#e3f6f5] py-12 px-4">
-      <div className="max-w-5xl mx-auto text-center">
+      <div className="max-w-6xl mx-auto text-center">
         <HeaderText
           title="Why Choose Us?"
-          description="At our service, we prioritize convenience, quality, and reliability. Why choose us?"
+          className="text-3xl text-[#272343] md:text-4xl font-bold"
+          description="Discover why thousands trust Servly for seamless, reliable, and expertly delivered home services tailored to your needs."
         />
+
         <div
           data-aos="fade-up"
           className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left"

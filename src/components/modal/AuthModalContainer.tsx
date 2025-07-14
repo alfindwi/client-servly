@@ -14,17 +14,19 @@ import { PasswordInput } from "../password-input";
 
 export function AuthModalContainer() {
   const [type, setType] = useState<"login" | "register">("login");
-  const [password, setPassword] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
+  const [registerPassword, setRegisterPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
 
   useEffect(() => {
-    if (password !== confirmPassword) {
+    if (registerPassword !== confirmPassword) {
       setError("Passwords do not match");
     } else {
       setError("");
     }
   });
+
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -33,7 +35,7 @@ export function AuthModalContainer() {
 
       <DialogContent className="bg-white text-gray-800 border border-blue-300 rounded-xl shadow-xl font-sans max-w-md w-full px-6 py-8">
         <DialogHeader>
-          <DialogTitle className="text-xl font-bold text-[#0074C1]">
+          <DialogTitle className="text-xl font-bold text-[#272343]">
             {type === "login" ? "Sign In to Your Account" : "Create an Account"}
           </DialogTitle>
         </DialogHeader>
@@ -60,34 +62,48 @@ export function AuthModalContainer() {
             />
           </div>
 
-          <div className="grid gap-3">
-            <Label htmlFor="password">
-              Password<span className="text-red-500">*</span>
-            </Label>
-            <PasswordInput
-              id="password"
-              placeholder="••••••••"
-              required
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-
-          {type === "register" && (
+          {type === "login" ? (
             <div className="grid gap-3">
-              <Label htmlFor="confirm-password">
-                Confirm Password<span className="text-red-500">*</span>
+              <Label htmlFor="password">
+                Password<span className="text-red-500">*</span>
               </Label>
               <PasswordInput
-                id="confirm-password"
+                id="password"
                 placeholder="••••••••"
                 required
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
+                value={loginPassword}
+                onChange={(e) => setLoginPassword(e.target.value)}
               />
             </div>
+          ) : (
+            <>
+              <div className="grid gap-3">
+                <Label htmlFor="password">
+                  Password<span className="text-red-500">*</span>
+                </Label>
+                <PasswordInput
+                  id="password"
+                  placeholder="••••••••"
+                  required
+                  value={registerPassword}
+                  onChange={(e) => setRegisterPassword(e.target.value)}
+                />
+              </div>
+              <div className="grid gap-3">
+                <Label htmlFor="confirm-password">
+                  Confirm Password<span className="text-red-500">*</span>
+                </Label>
+                <PasswordInput
+                  id="confirm-password"
+                  placeholder="••••••••"
+                  required
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                />
+              </div>
+              {error && <p className="text-red-500 text-sm">{error}</p>}
+            </>
           )}
-          {error && <p className="text-red-500 text-sm">{error}</p>}
         </div>
 
         <DialogClose asChild>
