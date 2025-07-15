@@ -20,7 +20,7 @@ export function CardTestimonial() {
   const [testimonials, setTestimonials] = useState<Testimonial[]>([])
 
   useEffect(() => {
-    fetch("https://api.npoint.io/98d7f81f4067e7201437")
+    fetch("https://api.npoint.io/da1790f9ce08ae545f7e")
       .then((res) => res.json())
       .then((data) => setTestimonials(data))
       .catch((err) => console.log(err))

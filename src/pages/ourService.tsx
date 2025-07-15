@@ -1,8 +1,6 @@
 import { CardService } from "@/components/cardService";
 import { HeaderText } from "@/components/headerText";
 import { Button } from "@/components/ui/button";
-import AOS from "aos";
-import { useEffect } from "react";
 import { CgSmartHomeRefrigerator } from "react-icons/cg";
 import { FaSink } from "react-icons/fa";
 import { FaFaucetDrip } from "react-icons/fa6";
@@ -12,13 +10,6 @@ import { TbAirConditioningDisabled } from "react-icons/tb";
 import { Link } from "react-router-dom";
 
 export function OurService() {
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-      easing: "ease-in-out",
-    });
-  }, []);
   return (
     <div className="py-12 px-4">
       <div className="max-w-6xl mx-auto text-center">

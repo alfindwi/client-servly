@@ -26,7 +26,7 @@ export function Services() {
       <div className="max-w-6xl mx-auto text-center">
         <HeaderText
           title="Our Services"
-          className="text-4xl text-[#272343] md:text-6xl mb-5 font-bold"
+          className="text-3xl text-[#272343] md:text-5xl mb-5 font-bold"
           description="Explore a full range of trusted, on-demand home services — delivered quickly and professionally by experienced specialists."
         />
         <div

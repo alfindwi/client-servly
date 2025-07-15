@@ -1,6 +1,8 @@
+import type { ReactNode } from "react";
+
 interface CardHowWorksProps {
     number: string;
-    icon: string;
+    icon: ReactNode;
     title: string;
     description: string;
 }
@@ -9,7 +11,7 @@ export function CardHowWorks({ number, title, description, icon }: CardHowWorksP
     return (
         <div
           className="group max-w-md cursor-pointer bg-white rounded-xl shadow-md 
-               hover:shadow-lg transition-transform duration-300 hover:scale-105 relative"
+               hover:shadow-lg transition-transform duration-300 relative "
         >
           <div
             className="absolute -top-6 left-1/2 transform -translate-x-1/2 
@@ -24,7 +26,7 @@ export function CardHowWorks({ number, title, description, icon }: CardHowWorksP
           </div>
 
           <div className="flex flex-col items-center pt-10 pb-6 px-3">
-            <div>
+            <div className="text-4xl mb-4 text-[#0074C1]">
                 {icon}
             </div>
             <h3 className="font-semibold text-lg mb-1 text-[#272343] group-hover:text-[#0074C1] transition-colors duration-300">

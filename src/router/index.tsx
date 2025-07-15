@@ -1,13 +1,14 @@
 import { AppLayout } from "@/components/appLayout";
 import { Home } from "@/pages/home";
 import { HowWorks } from "@/pages/howWorks";
-import { Providers } from "@/pages/providers";
+import { Providers } from "@/pages/forProviders";
 import { Services } from "@/pages/services";
 import {
   createBrowserRouter,
   RouterProvider,
   type RouteObject
 } from "react-router-dom";
+import { Customer } from "@/pages/customer";
 
 const route: RouteObject[] = [
   {
@@ -27,6 +28,10 @@ const route: RouteObject[] = [
         path: "/providers",
         element: <Providers />
       },
+      {
+        path: "/customers",
+        element: <Customer />
+      }
     ],
   },
 ];
